@@ -1,0 +1,3067 @@
+<!doctype html>
+<html lang="bn" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="রমজান ক্যালেন্ডার ১৪৪৭ - ঢাকা, বাংলাদেশ | Ramadan Calendar 2026 with Sehri & Iftar times, Hadith, and Duas"
+    />
+    <meta
+      property="og:title"
+      content="রমজান ক্যালেন্ডার ১৪৪৭ | Dhaka, Bangladesh"
+    />
+    <meta
+      property="og:description"
+      content="Complete Ramadan 2026 timetable with live countdown, Hadith, and Duas for Dhaka"
+    />
+    <meta property="og:type" content="website" />
+    <title>رمضان كريم | রমজান ক্যালেন্ডার ১৪৪৭ - ঢাকা</title>
+    <link rel="icon" type="image/avif" href="favicon.avif" />
+
+    <link rel="icon" type="image/png" href="Ramadan img.avif" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ===== CSS VARIABLES ===== */
+      :root {
+        --primary: #1a3a28;
+        --primary-light: #2d5e40;
+        --primary-dark: #0f2318;
+        --secondary: #c9a959;
+        --secondary-light: #e2c97e;
+        --secondary-dark: #a8893a;
+        --accent: #b76e79;
+        --bg: #fbf9f2;
+        --bg-card: #ffffff;
+        --bg-card2: #f4f0e6;
+        --text: #000000;
+        --text-muted: #6b6b5a;
+        --border: rgba(193, 163, 89, 0.25);
+        --shadow: 0 8px 40px rgba(26, 58, 40, 0.12);
+        --shadow-lg: 0 20px 60px rgba(26, 58, 40, 0.18);
+        --gradient: linear-gradient(
+          135deg,
+          #1a3a28 0%,
+          #2d5e40 40%,
+          #1a4a32 100%
+        );
+        --gradient-gold: linear-gradient(135deg, #c9a959, #e2c97e, #a8893a);
+        --radius: 16px;
+        --radius-sm: 8px;
+        --font-arabic: "Amiri", serif;
+        --font-bengali: "Noto Sans Bengali", sans-serif;
+        --font-display: "Playfair Display", serif;
+        --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      [data-theme="dark"] {
+        --primary: #2d5e40;
+        --primary-light: #3d7a54;
+        --primary-dark: #1a3a28;
+        --bg: #0f1a13;
+        --bg-card: #172214;
+        --bg-card2: #1e2e1a;
+        --text: #f0ede4;
+        --text-muted: #9a9a7a;
+        --border: rgba(201, 169, 89, 0.2);
+        --shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+      }
+
+      /* ===== RESET & BASE ===== */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: var(--font-bengali);
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        transition:
+          background var(--transition),
+          color var(--transition);
+        overflow-x: hidden;
+      }
+
+      /* ===== GEOMETRIC PATTERN BACKGROUND ===== */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          radial-gradient(
+            circle at 20% 20%,
+            rgba(201, 169, 89, 0.06) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 80%,
+            rgba(26, 58, 40, 0.06) 0%,
+            transparent 50%
+          ),
+          url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 20 L50 20 L38 29 L43 44 L30 35 L17 44 L22 29 L10 20 L25 20 Z' fill='none' stroke='%23c9a959' stroke-width='0.3' opacity='0.15'/%3E%3C/svg%3E");
+        background-size: 60px 60px;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* ===== SCROLLBAR ===== */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--secondary);
+        border-radius: 3px;
+      }
+
+      /* ===== UTILITIES ===== */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .gold-divider {
+        height: 2px;
+        background: var(--gradient-gold);
+        border-radius: 2px;
+        margin: 0 auto;
+        position: relative;
+      }
+      .gold-divider::before,
+      .gold-divider::after {
+        content: "✦";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--secondary);
+        font-size: 14px;
+        background: var(--bg);
+        padding: 0 8px;
+      }
+      .gold-divider::before {
+        left: 20px;
+      }
+      .gold-divider::after {
+        right: 20px;
+      }
+
+      /* ===== HEADER ===== */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--primary);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 16px;
+      }
+      .header-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .crescent-icon {
+        width: 42px;
+        height: 42px;
+        position: relative;
+        flex-shrink: 0;
+      }
+      .header-titles h1 {
+        font-family: var(--font-arabic);
+        color: var(--secondary-light);
+        font-size: clamp(16px, 3vw, 22px);
+        line-height: 1.2;
+      }
+      .header-titles .subtitle {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: clamp(10px, 1.5vw, 13px);
+        font-family: var(--font-bengali);
+      }
+      .header-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .location-badge {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(201, 169, 89, 0.3);
+        color: var(--secondary-light);
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-family: var(--font-bengali);
+      }
+      .btn-icon {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        transition: var(--transition);
+      }
+      .btn-icon:hover {
+        background: rgba(201, 169, 89, 0.3);
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        position: relative;
+        background: var(--gradient);
+        overflow: hidden;
+        padding: clamp(40px, 8vw, 80px) 20px clamp(50px, 10vw, 100px);
+        z-index: 1;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='rgba(201,169,89,0.08)' stroke-width='0.8'/%3E%3Cpath d='M50 10 L60 35 L85 35 L65 52 L73 77 L50 62 L27 77 L35 52 L15 35 L40 35 Z' fill='rgba(201,169,89,0.04)' stroke='rgba(201,169,89,0.06)' stroke-width='0.5'/%3E%3C/svg%3E")
+          repeat;
+        background-size: 100px 100px;
+        animation: patternFloat 20s linear infinite;
+        opacity: 0.5;
+      }
+      @keyframes patternFloat {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 100px 100px;
+        }
+      }
+
+      .hero-star {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        background: white;
+        border-radius: 50%;
+        animation: twinkle 3s ease-in-out infinite;
+      }
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0.2;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.5);
+        }
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+      }
+
+      .ramadan-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(201, 169, 89, 0.15);
+        border: 1px solid rgba(201, 169, 89, 0.4);
+        color: var(--secondary-light);
+        padding: 6px 20px;
+        border-radius: 30px;
+        font-size: 13px;
+        margin-bottom: 16px;
+        animation: fadeInDown 0.6s ease;
+      }
+      .hero-arabic {
+        font-family: var(--font-arabic);
+        color: var(--secondary-light);
+        font-size: clamp(28px, 6vw, 56px);
+        line-height: 1.3;
+        margin-bottom: 8px;
+        animation: fadeInDown 0.7s ease;
+      }
+      .hero-bengali {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: clamp(14px, 2.5vw, 20px);
+        margin-bottom: 40px;
+        animation: fadeInDown 0.8s ease;
+      }
+
+      /* ===== TIMER CARDS ===== */
+      .timer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        max-width: 700px;
+        margin: 0 auto 30px;
+        animation: fadeInUp 0.9s ease;
+      }
+      @media (max-width: 480px) {
+        .timer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .timer-card {
+        background: rgba(255, 255, 255, 0.07);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(201, 169, 89, 0.25);
+        border-radius: var(--radius);
+        padding: clamp(20px, 4vw, 32px);
+        text-align: center;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+      }
+      .timer-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(201, 169, 89, 0.08) 0%,
+          transparent 60%
+        );
+        pointer-events: none;
+      }
+      .timer-card.warning {
+        border-color: rgba(239, 68, 68, 0.5);
+        animation: pulse-warning 1s ease infinite;
+      }
+      @keyframes pulse-warning {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3);
+        }
+        50% {
+          box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+        }
+      }
+
+      .timer-icon {
+        font-size: 32px;
+        margin-bottom: 8px;
+      }
+      .timer-label {
+        color: var(--secondary-light);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 4px;
+      }
+      .timer-name {
+        color: white;
+        font-family: var(--font-display);
+        font-size: clamp(18px, 3vw, 24px);
+        margin-bottom: 12px;
+      }
+      .timer-time-main {
+        color: var(--secondary-light);
+        font-size: clamp(13px, 2vw, 15px);
+        margin-bottom: 12px;
+        font-weight: 500;
+      }
+      .timer-countdown {
+        font-family: "Courier New", monospace;
+        font-size: clamp(28px, 5vw, 42px);
+        font-weight: 700;
+        color: white;
+        letter-spacing: 2px;
+        text-shadow: 0 0 20px rgba(201, 169, 89, 0.5);
+      }
+      .timer-countdown.warning {
+        color: #ff6b6b;
+      }
+      .timer-label-remaining {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 11px;
+        margin-top: 6px;
+      }
+
+      /* Progress bar */
+      .timer-progress {
+        height: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+        margin-top: 16px;
+        overflow: hidden;
+      }
+      .timer-progress-bar {
+        height: 100%;
+        background: var(--gradient-gold);
+        border-radius: 2px;
+        transition: width 1s linear;
+      }
+
+      /* Today info strip */
+      .today-strip {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(201, 169, 89, 0.2);
+        border-radius: 12px;
+        padding: 12px 24px;
+        max-width: 700px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        animation: fadeInUp 1s ease;
+      }
+      .today-strip-item {
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .today-strip-item .val {
+        display: block;
+        color: var(--secondary-light);
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .today-strip-item .lbl {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .today-strip-divider {
+        width: 1px;
+        height: 30px;
+        background: rgba(201, 169, 89, 0.3);
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ===== SECTION STYLES ===== */
+      .section {
+        padding: clamp(40px, 6vw, 80px) 0;
+        position: relative;
+        z-index: 1;
+      }
+      .section-header {
+        text-align: center;
+        margin-bottom: clamp(30px, 5vw, 50px);
+      }
+      .section-label {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--secondary);
+        margin-bottom: 8px;
+      }
+      .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(24px, 4vw, 38px);
+        color: var(--primary);
+        margin-bottom: 8px;
+      }
+      [data-theme="dark"] .section-title {
+        color: var(--secondary-light);
+      }
+      .section-arabic {
+        font-family: var(--font-arabic);
+        font-size: clamp(18px, 3vw, 26px);
+        color: var(--text-muted);
+        direction: rtl;
+      }
+
+      /* ===== CALENDAR ===== */
+      .calendar-controls {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+      }
+      .segment-btn {
+        padding: 6px 16px;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--text-muted);
+        font-family: var(--font-bengali);
+        font-size: 12px;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+      .segment-btn.active,
+      .segment-btn:hover {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+      }
+      .segment-btn.seg-1.active {
+        background: var(--primary);
+      }
+      .segment-btn.seg-2.active {
+        background: #5b3a7e;
+      }
+      .segment-btn.seg-3.active {
+        background: #7e3a3a;
+      }
+
+      .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 175px), 1fr));
+        gap: 12px;
+      }
+
+      .cal-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        padding: 14px;
+        cursor: pointer;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+      }
+      .cal-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+      }
+      .cal-card.seg-1::before {
+        background: linear-gradient(90deg, #1a3a28, #2d5e40);
+      }
+      .cal-card.seg-2::before {
+        background: linear-gradient(90deg, #5b3a7e, #7b5ea7);
+      }
+      .cal-card.seg-3::before {
+        background: linear-gradient(90deg, #7e3a3a, #a85e5e);
+      }
+
+      .cal-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow);
+        border-color: var(--secondary);
+      }
+      .cal-card.today {
+        border-color: var(--secondary);
+        box-shadow: 0 0 0 2px rgba(240, 202, 105, 0.3);
+      }
+      .cal-card.today .cal-day-num {
+        color: var(--secondary);
+      }
+      .today-pulse {
+        display: none;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--secondary);
+        animation: pulse 2s ease infinite;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(201, 169, 89, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 0 6px rgba(201, 169, 89, 0);
+        }
+      }
+      .cal-card.today .today-pulse {
+        display: block;
+      }
+
+      .cal-day-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+      .cal-day-num {
+        font-family: var(--font-display);
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1;
+      }
+      [data-theme="dark"] .cal-day-num {
+        color: var(--secondary-light);
+      }
+      .cal-day-meta {
+        text-align: right;
+      }
+      .cal-hijri {
+        font-family: var(--font-arabic);
+        font-size: 13px;
+        color: var(--secondary);
+        direction: rtl;
+      }
+      .cal-date {
+        font-size: 10px;
+        color: var(--text-muted);
+      }
+      .cal-weekday {
+        font-size: 10px;
+        color: var(--text-muted);
+      }
+
+      .cal-times {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+      }
+      .cal-time-item {
+        background: var(--bg-card2);
+        border-radius: 6px;
+        padding: 6px 8px;
+      }
+      .cal-time-icon {
+        font-size: 14px;
+      }
+      .cal-time-label {
+        font-size: 9px;
+        color: var(--text-muted);
+        display: block;
+      }
+      .cal-time-val {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      /* expanded card */
+      .cal-expanded {
+        display: none;
+        grid-column: 1 / -1;
+        background: var(--bg-card);
+        border: 2px solid var(--secondary);
+        border-radius: var(--radius);
+        padding: 24px;
+        animation: expandCard 0.3s ease;
+      }
+      @keyframes expandCard {
+        from {
+          opacity: 0;
+          transform: scaleY(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scaleY(1);
+        }
+      }
+      .cal-expanded.show {
+        display: block;
+      }
+      .expanded-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 12px;
+        margin-top: 16px;
+      }
+      .expanded-prayer {
+        background: var(--bg-card2);
+        border-radius: 10px;
+        padding: 12px;
+        text-align: center;
+        border: 1px solid var(--border);
+      }
+      .ep-icon {
+        font-size: 24px;
+        margin-bottom: 4px;
+      }
+      .ep-name {
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+      .ep-time {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--primary);
+        margin-top: 2px;
+      }
+      [data-theme="dark"] .ep-time {
+        color: var(--secondary-light);
+      }
+      .ep-special {
+        color: var(--accent);
+      }
+
+      /* ===== HADITH SECTION ===== */
+      .hadith-section {
+        background: var(--primary);
+        position: relative;
+        z-index: 1;
+      }
+      .hadith-section .section-title {
+        color: var(--secondary-light);
+      }
+      .hadith-section .section-label {
+        color: rgba(238, 184, 47, 0.7);
+      }
+
+      .hadith-carousel {
+        position: relative;
+        overflow: hidden;
+      }
+      .hadith-track {
+        display: flex;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .hadith-slide {
+        min-width: 100%;
+        padding: 0 10px;
+      }
+      .hadith-card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(201, 169, 89, 0.2);
+        border-radius: var(--radius);
+        padding: clamp(24px, 5vw, 48px);
+        max-width: 860px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .hadith-arabic-text {
+        font-family: var(--font-arabic);
+        font-size: clamp(18px, 3vw, 26px);
+        color: var(--secondary-light);
+        direction: rtl;
+        line-height: 1.8;
+        margin-bottom: 24px;
+        border-right: 3px solid var(--secondary);
+        padding-right: 16px;
+        text-align: right;
+      }
+      .hadith-narrator {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+      .hadith-translation {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: clamp(14px, 2vw, 16px);
+        line-height: 1.8;
+        margin-bottom: 16px;
+        font-style: italic;
+      }
+      .hadith-source {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(201, 169, 89, 0.15);
+        border: 1px solid rgba(201, 169, 89, 0.3);
+        color: var(--secondary-light);
+        padding: 4px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+      }
+
+      .hadith-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 28px;
+      }
+      .hadith-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(201, 169, 89, 0.15);
+        border: 1px solid rgba(201, 169, 89, 0.3);
+        color: var(--secondary-light);
+        cursor: pointer;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+      }
+      .hadith-btn:hover {
+        background: rgba(201, 169, 89, 0.3);
+      }
+      .hadith-dots {
+        display: flex;
+        gap: 6px;
+      }
+      .hadith-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: rgba(251, 199, 65, 0.3);
+        cursor: pointer;
+        transition: var(--transition);
+      }
+      .hadith-dot.active {
+        background: var(--secondary);
+        width: 18px;
+        border-radius: 3px;
+      }
+
+      /* ===== DUAS SECTION ===== */
+      .duas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+        gap: 20px;
+      }
+      .dua-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px;
+        transition: var(--transition);
+      }
+      .dua-card:hover {
+        box-shadow: var(--shadow);
+        transform: translateY(-2px);
+      }
+      .dua-title {
+        font-family: var(--font-display);
+        font-size: 18px;
+        color: var(--primary);
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      [data-theme="dark"] .dua-title {
+        color: var(--secondary-light);
+      }
+      .dua-subtitle {
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+      }
+      .dua-arabic {
+        font-family: var(--font-arabic);
+        font-size: clamp(17px, 2.5vw, 22px);
+        direction: rtl;
+        text-align: right;
+        color: var(--secondary-dark);
+        line-height: 1.8;
+        background: var(--bg-card2);
+        padding: 14px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+      }
+      [data-theme="dark"] .dua-arabic {
+        color: var(--secondary-light);
+      }
+      .dua-bengali {
+        font-size: 13px;
+        color: var(--text-muted);
+        line-height: 1.7;
+      }
+      .dua-english {
+        font-size: 13px;
+        color: var(--text-muted);
+        font-style: italic;
+        margin-top: 4px;
+        line-height: 1.7;
+      }
+
+      /* ===== TASBIH COUNTER ===== */
+      .tasbih-container {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .tasbih-ring {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: var(--gradient);
+        border: 6px solid var(--secondary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 24px;
+        cursor: pointer;
+        box-shadow: var(--shadow-lg);
+        transition:
+          transform 0.1s ease,
+          box-shadow 0.1s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .tasbih-ring::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at 30% 30%,
+          rgba(255, 255, 255, 0.1),
+          transparent 60%
+        );
+      }
+      .tasbih-ring:active {
+        transform: scale(0.96);
+      }
+      .tasbih-count {
+        font-size: 56px;
+        font-weight: 700;
+        color: white;
+        font-family: var(--font-display);
+        line-height: 1;
+      }
+      .tasbih-arabic {
+        color: var(--secondary-light);
+        font-family: var(--font-arabic);
+        font-size: 16px;
+      }
+      .tasbih-progress-ring {
+        position: absolute;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+      }
+      .tasbih-info {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+      .tasbih-info-item {
+        text-align: center;
+      }
+      .tasbih-info-item .num {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--primary);
+        font-family: var(--font-display);
+      }
+      [data-theme="dark"] .tasbih-info-item .num {
+        color: var(--secondary-light);
+      }
+      .tasbih-info-item .lbl {
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+      .tasbih-phrase {
+        font-family: var(--font-arabic);
+        font-size: 18px;
+        color: var(--secondary-dark);
+        margin-bottom: 4px;
+      }
+      [data-theme="dark"] .tasbih-phrase {
+        color: var(--secondary-light);
+      }
+      .tasbih-translation {
+        font-size: 12px;
+        color: var(--text-muted);
+      }
+      .tasbih-controls {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        margin-top: 16px;
+      }
+      .tasbih-ctrl-btn {
+        padding: 8px 20px;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--text-muted);
+        font-family: var(--font-bengali);
+        font-size: 13px;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+      .tasbih-ctrl-btn:hover {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+      }
+      .tasbih-ctrl-btn.reset {
+        color: var(--accent);
+        border-color: var(--accent);
+      }
+      .tasbih-ctrl-btn.reset:hover {
+        background: var(--accent);
+        color: white;
+      }
+
+      /* ===== SHARE BUTTON ===== */
+      .share-section {
+        text-align: center;
+        padding: 20px;
+      }
+      .btn-whatsapp {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #25d366;
+        color: white;
+        padding: 12px 28px;
+        border-radius: 30px;
+        border: none;
+        font-family: var(--font-bengali);
+        font-size: 15px;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        transition: var(--transition);
+        text-decoration: none;
+      }
+      .btn-whatsapp:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+      }
+
+      /* ===== SPECIAL NIGHTS ===== */
+      .cal-card.laylatul-qadr {
+        border-color: var(--accent);
+        background: linear-gradient(
+          135deg,
+          var(--bg-card),
+          rgba(183, 110, 121, 0.05)
+        );
+      }
+      .qadr-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        background: var(--accent);
+        color: white;
+        padding: 2px 8px;
+        border-radius: 10px;
+        font-size: 9px;
+        margin-top: 4px;
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        background: var(--primary-dark);
+        color: rgba(255, 255, 255, 0.7);
+        padding: 40px 0 20px;
+        position: relative;
+        z-index: 1;
+      }
+      .footer-palm {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 20px;
+        opacity: 0.4;
+      }
+      .footer-quote {
+        text-align: center;
+        font-family: var(--font-arabic);
+        font-size: 20px;
+        color: var(--secondary-light);
+        direction: rtl;
+        margin-bottom: 8px;
+      }
+      .footer-quote-tr {
+        text-align: center;
+        font-style: italic;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 24px;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 24px;
+        max-width: 1000px;
+        margin: 0 auto 24px;
+        padding: 0 20px;
+      }
+      .footer-col h4 {
+        color: var(--secondary-light);
+        font-size: 13px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+      }
+      .footer-col p,
+      .footer-col a {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 12px;
+        line-height: 1.8;
+        text-decoration: none;
+        display: block;
+        transition: var(--transition);
+      }
+      .footer-col a:hover {
+        color: var(--secondary-light);
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 16px;
+        text-align: center;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 1);
+        padding-bottom: 4px;
+      }
+
+      /* ===== STICKY PRAYER INDICATOR ===== */
+      .prayer-indicator {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        background: var(--primary);
+        border: 2px solid var(--secondary);
+        border-radius: 16px;
+        padding: 12px 16px;
+        z-index: 50;
+        box-shadow: var(--shadow-lg);
+        min-width: 160px;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+      .prayer-indicator:hover {
+        transform: translateY(-2px);
+      }
+      .pi-label {
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .pi-name {
+        color: var(--secondary-light);
+        font-size: 16px;
+        font-weight: 700;
+        font-family: var(--font-display);
+      }
+      .pi-time {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 13px;
+      }
+
+      /* ===== ANIMATIONS ===== */
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .loading {
+        animation: spin 1s linear infinite;
+      }
+
+      /* ===== MODAL ===== */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 200;
+        backdrop-filter: blur(4px);
+        animation: fadeIn 0.2s ease;
+      }
+      .modal-overlay.show {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .modal-box {
+        background: var(--bg-card);
+        border-radius: var(--radius);
+        padding: 32px;
+        max-width: 500px;
+        width: 100%;
+        border: 1px solid var(--secondary);
+        animation: slideUp 0.3s ease;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+      @keyframes slideUp {
+        from {
+          transform: translateY(30px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .modal-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.1);
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-muted);
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 640px) {
+        .header-inner {
+          flex-wrap: wrap;
+        }
+        .timer-card {
+          padding: 16px;
+        }
+        .today-strip {
+          gap: 10px;
+          padding: 10px 16px;
+        }
+        .calendar-grid {
+          grid-template-columns: repeat(
+            auto-fill,
+            minmax(min(100%, 150px), 1fr)
+          );
+        }
+        .prayer-indicator {
+          bottom: 10px;
+          right: 10px;
+          min-width: 140px;
+        }
+      }
+
+      /* Reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header role="banner">
+      <div class="header-inner">
+        <div class="header-logo">
+          <svg
+            class="crescent-icon"
+            viewBox="0 0 42 42"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M21 5C13.82 5 8 10.82 8 18C8 25.18 13.82 31 21 31C22.5 31 23.94 30.77 25.28 30.33C22.58 28.38 20.77 25.25 20.77 21.69C20.77 16.38 25.12 12.04 30.43 12.04C31.5 12.04 32.53 12.21 33.5 12.52C32.06 8.14 27.89 5 23 5C22.33 5 21.66 5.07 21 5Z"
+              fill="#c9a959"
+            />
+            <circle cx="32" cy="9" r="2" fill="#c9a959" opacity="0.6" />
+            <circle cx="36" cy="14" r="1.5" fill="#c9a959" opacity="0.4" />
+            <circle cx="28" cy="5" r="1" fill="#c9a959" opacity="0.5" />
+          </svg>
+          <div class="header-titles">
+            <h1>رمضان كريم | রমজান ক্যালেন্ডার ১৪৪৭</h1>
+            <span class="subtitle"
+              >ঢাকা, বাংলাদেশ | Islamic Foundation Bangladesh সময়সূচি</span
+            >
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="location-badge" aria-label="অবস্থান: ঢাকা, বাংলাদেশ">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"
+              />
+            </svg>
+            ঢাকা, বাংলাদেশ
+          </div>
+          <button
+            class="btn-icon"
+            onclick="toggleTheme()"
+            aria-label="থিম পরিবর্তন করুন"
+            title="Dark/Light Mode"
+          >
+            🌙
+          </button>
+          <button
+            class="btn-icon"
+            onclick="openPrintView()"
+            aria-label="প্রিন্ট করুন"
+            title="Print Calendar"
+          >
+            🖨️
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-label="রমজান টাইমার">
+      <!-- Starfield -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hero = document.querySelector(".hero");
+          for (let i = 0; i < 40; i++) {
+            const star = document.createElement("div");
+            star.className = "hero-star";
+            star.style.cssText = `left:${Math.random() * 100}%;top:${Math.random() * 100}%;opacity:${Math.random()};animation-delay:${Math.random() * 3}s;animation-duration:${2 + Math.random() * 3}s`;
+            hero.appendChild(star);
+          }
+        });
+      </script>
+
+      <div class="hero-content container">
+        <div class="ramadan-badge">
+          ✨ رمضان المبارك ١٤٤٧ &nbsp;|&nbsp; মাহে রমজান ১৪৪৭
+        </div>
+        <div class="hero-arabic">رَمَضَانُ شَهْرُ الْبَرَكَاتِ</div>
+        <div class="hero-bengali">
+          রমজান — বরকতের মাস | Dhaka, Bangladesh Prayer Timetable
+        </div>
+
+        <!-- Timer Cards -->
+        <div
+          class="timer-grid"
+          role="timer"
+          aria-live="polite"
+          aria-label="সেহরি ও ইফতারের কাউন্টডাউন"
+        >
+          <!-- Sehri Timer -->
+          <div class="timer-card" id="sehriCard">
+            <div class="timer-icon">🌙</div>
+            <div class="timer-label">আজকের সেহরি</div>
+            <div class="timer-name">Sehri / সেহরি</div>
+            <div class="timer-time-main" id="sehriTimeDisplay">--:-- AM</div>
+            <div class="timer-countdown" id="sehriCountdown">--:--:--</div>
+            <div class="timer-label-remaining">শেষ হতে বাকি</div>
+            <div class="timer-progress">
+              <div
+                class="timer-progress-bar"
+                id="sehriProgress"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+          <!-- Iftar Timer -->
+          <div class="timer-card" id="iftarCard">
+            <div class="timer-icon">🌅</div>
+            <div class="timer-label">আজকের ইফতার</div>
+            <div class="timer-name">Iftar / ইফতার</div>
+            <div class="timer-time-main" id="iftarTimeDisplay">--:-- PM</div>
+            <div class="timer-countdown" id="iftarCountdown">--:--:--</div>
+            <div class="timer-label-remaining">শেষ হতে বাকি</div>
+            <div class="timer-progress">
+              <div
+                class="timer-progress-bar"
+                id="iftarProgress"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Today Strip -->
+        <div
+          class="today-strip"
+          id="todayStrip"
+          role="status"
+          aria-label="আজকের তথ্য"
+        >
+          <div class="today-strip-item">
+            <span class="val" id="todayRamadanDay">—</span>
+            <span class="lbl">রমজানের দিন</span>
+          </div>
+          <div class="today-strip-divider"></div>
+          <div class="today-strip-item">
+            <span class="val" id="todayGregorian">—</span>
+            <span class="lbl">তারিখ</span>
+          </div>
+          <div class="today-strip-divider"></div>
+          <div class="today-strip-item">
+            <span class="val" id="todayHijri">—</span>
+            <span class="lbl">হিজরি তারিখ</span>
+          </div>
+          <div class="today-strip-divider"></div>
+          <div class="today-strip-item">
+            <span class="val" id="todayWeekday">—</span>
+            <span class="lbl">বার</span>
+          </div>
+        </div>
+
+        <!-- WhatsApp Share -->
+        <!-- <div class="share-section">
+          <button
+            class="btn-whatsapp"
+            onclick="shareWhatsApp()"
+            aria-label="হোয়াটসঅ্যাপে শেয়ার করুন"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+            আজকের ইফতার শেয়ার করুন
+          </button>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ===== CALENDAR SECTION ===== -->
+    <section class="section" id="calendar" aria-labelledby="calendarHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">রমজান ১৪৪৭ | ফেব্রুয়ারি-মার্চ ২০২৬</div>
+          <h2 class="section-title" id="calendarHeading">সম্পূর্ণ সময়সূচি</h2>
+          <div class="section-arabic">جدول مواقيت الصلاة - ٣٠ يوم</div>
+        </div>
+
+        <!-- 10-day Segment Filter -->
+        <div class="calendar-controls" role="group" aria-label="দশকের ফিল্টার">
+          <button
+            class="segment-btn seg-0 active"
+            onclick="filterCalendar('all')"
+            aria-pressed="true"
+          >
+            সব ৩০ দিন
+          </button>
+          <button
+            class="segment-btn seg-1"
+            onclick="filterCalendar(1)"
+            aria-pressed="false"
+          >
+            ১ম দশক (১-১০)
+          </button>
+          <button
+            class="segment-btn seg-2"
+            onclick="filterCalendar(2)"
+            aria-pressed="false"
+          >
+            ২য় দশক (১১-২০)
+          </button>
+          <button
+            class="segment-btn seg-3"
+            onclick="filterCalendar(3)"
+            aria-pressed="false"
+          >
+            ৩য় দশক (২১-৩০)
+          </button>
+        </div>
+
+        <div
+          class="calendar-grid"
+          id="calendarGrid"
+          role="list"
+          aria-label="রমজানের দিনগুলি"
+        >
+          <!-- Generated by JS -->
+        </div>
+
+        <!-- Expanded detail panel -->
+        <div
+          class="cal-expanded"
+          id="calExpanded"
+          role="dialog"
+          aria-label="বিস্তারিত নামাজের সময়"
+        ></div>
+      </div>
+    </section>
+
+    <!-- ===== HADITH SECTION ===== -->
+    <section
+      class="section hadith-section"
+      id="hadith"
+      aria-labelledby="hadithHeading"
+    >
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Authentic Hadith Collection</div>
+          <h2 class="section-title" id="hadithHeading">রমজান সম্পর্কে হাদিস</h2>
+          <div class="section-arabic">أحاديث شريفة في رمضان المبارك</div>
+        </div>
+
+        <div
+          class="hadith-carousel"
+          id="hadithCarousel"
+          aria-label="হাদিস ক্যারোসেল"
+        >
+          <div class="hadith-track" id="hadithTrack">
+            <!-- Generated by JS -->
+          </div>
+        </div>
+
+        <div class="hadith-nav" role="navigation" aria-label="হাদিস নেভিগেশন">
+          <button
+            class="hadith-btn"
+            onclick="prevHadith()"
+            aria-label="আগের হাদিস"
+          >
+            ←
+          </button>
+          <div class="hadith-dots" id="hadithDots" role="tablist"></div>
+          <button
+            class="hadith-btn"
+            onclick="nextHadith()"
+            aria-label="পরের হাদিস"
+          >
+            →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DUAS SECTION ===== -->
+    <section class="section" id="duas" aria-labelledby="duasHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Essential Supplications</div>
+          <h2 class="section-title" id="duasHeading">
+            গুরুত্বপূর্ণ দোয়া সমূহ
+          </h2>
+          <div class="section-arabic">أدعية رمضان المأثورة</div>
+        </div>
+        <div class="duas-grid" id="duasGrid">
+          <!-- Generated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TASBIH COUNTER ===== -->
+    <section
+      class="section"
+      id="tasbih"
+      aria-labelledby="tasbihHeading"
+      style="background: var(--bg-card2)"
+    >
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Digital Misbaha</div>
+          <h2 class="section-title" id="tasbihHeading">তাসবিহ কাউন্টার</h2>
+          <div class="section-arabic">المسبحة الرقمية</div>
+        </div>
+
+        <div class="tasbih-container">
+          <div class="tasbih-info" id="tasbihInfo">
+            <div class="tasbih-info-item">
+              <div class="num" id="tasbihRound">১</div>
+              <div class="lbl">রাউন্ড</div>
+            </div>
+            <div
+              class="tasbih-info-item"
+              style="
+                border-left: 1px solid var(--border);
+                border-right: 1px solid var(--border);
+                padding: 0 20px;
+              "
+            >
+              <div class="num" id="tasbihTotal">০</div>
+              <div class="lbl">মোট</div>
+            </div>
+            <div class="tasbih-info-item">
+              <div class="num" id="tasbihTarget">৩৩</div>
+              <div class="lbl">লক্ষ্য</div>
+            </div>
+          </div>
+
+          <div
+            class="tasbih-ring"
+            onclick="clickTasbih()"
+            role="button"
+            aria-label="তাসবিহ গণনা করুন"
+            tabindex="0"
+            onkeypress="if (event.key === 'Enter') clickTasbih();"
+          >
+            <div class="tasbih-count" id="tasbihCount">০</div>
+            <div class="tasbih-arabic" id="tasbihCurrentPhrase">
+              سُبْحَانَ اللَّهِ
+            </div>
+          </div>
+
+          <div id="tasbihPhraseDisplay">
+            <div class="tasbih-phrase" id="tasbihPhrase">سُبْحَانَ اللَّهِ</div>
+            <div class="tasbih-translation" id="tasbihTr">
+              সুবহানআল্লাহ — আল্লাহ পবিত্র | Glory be to Allah (33x)
+            </div>
+          </div>
+
+          <div class="tasbih-controls">
+            <button class="tasbih-ctrl-btn" onclick="undoTasbih()">
+              ↩ পূর্বাবস্থা
+            </button>
+            <button class="tasbih-ctrl-btn reset" onclick="resetTasbih()">
+              ↺ রিসেট
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer role="contentinfo">
+      <div class="footer-palm" aria-hidden="true">🌴</div>
+      <div class="footer-quote">وَالصَّائِمُونَ وَالصَّائِمَاتُ</div>
+      <div class="footer-quote-tr">
+        "And the men who fast and the women who fast..." — Quran 33:35
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>সূত্র ও তথ্য</h4>
+          <p>ইসলামিক ফাউন্ডেশন বাংলাদেশ</p>
+          <p>Ramadan 1447 AH / 2026 CE</p>
+          <p>ঢাকা, বাংলাদেশ (23.7°N, 90.4°E)</p>
+        </div>
+        <div class="footer-col">
+          <h4>নামাজের সময়</h4>
+          <p>ফজর থেকে এশা পর্যন্ত</p>
+          <p>সেহরি ও ইফতারের সময়</p>
+          <p>লাইলাতুল কদর: ২৬শে রমজান রাত</p>
+        </div>
+        <div class="footer-col">
+          <h4>বিশেষ রাতসমূহ</h4>
+          <p>২১, ২৩, ২৫, ২৭, ২৯ রমজান</p>
+          <p>শেষ দশক বিশেষভাবে গুরুত্বপূর্ণ</p>
+          <p>ইতিকাফ: শেষ ১০ দিন</p>
+        </div>
+        <div class="footer-col">
+          <h4>গুরুত্বপূর্ণ নোট</h4>
+          <p>সময়সূচি ইসলামিক ফাউন্ডেশন অনুযায়ী</p>
+          <p>স্থানীয় মসজিদের সময় মেনে চলুন</p>
+          <p>সেহরির শেষ সময়ের আগেই খাওয়া শেষ করুন</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          রমজান ক্যালেন্ডার ১৪৪৭ | Based on Islamic Foundation Bangladesh |
+          Updated: March 2026 | This Website is Developed by &copy; Mohammad
+          Adib Abtahi
+        </p>
+        <p style="margin-top: 4px">اللَّهُمَّ بَارِكْ لَنَا فِي رَمَضَانَ</p>
+      </div>
+    </footer>
+
+    <!-- ===== STICKY PRAYER INDICATOR ===== -->
+    <div
+      class="prayer-indicator"
+      id="prayerIndicator"
+      onclick="scrollToCalendar()"
+      role="status"
+      aria-live="polite"
+      aria-label="বর্তমান নামাজের সময়"
+    >
+      <div class="pi-label">পরবর্তী নামাজ</div>
+      <div class="pi-name" id="piName">—</div>
+      <div class="pi-time" id="piTime">—</div>
+    </div>
+
+    <!-- ===== PRINT MODAL ===== -->
+    <div class="modal-overlay" id="printModal" onclick="closePrintModal(event)">
+      <div class="modal-box" style="position: relative">
+        <button
+          class="modal-close"
+          onclick="closePrintModal()"
+          aria-label="বন্ধ করুন"
+        >
+          ✕
+        </button>
+        <h3
+          style="
+            font-family: var(--font-display);
+            color: var(--primary);
+            margin-bottom: 12px;
+          "
+        >
+          🖨️ প্রিন্ট ক্যালেন্ডার
+        </h3>
+        <p
+          style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px"
+        >
+          ব্রাউজার প্রিন্ট ডায়ালগ খুলতে OK চাপুন।
+        </p>
+        <button
+          onclick="
+            window.print();
+            closePrintModal();
+          "
+          style="
+            background: var(--primary);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-bengali);
+          "
+        >
+          প্রিন্ট করুন
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+      // =============================================
+      // RAMADAN DATA - 30 DAYS FOR DHAKA, BANGLADESH
+      // Ramadan 1447 AH starts Feb 19, 2026
+      // Times from Islamic Foundation Bangladesh
+      // =============================================
+      const ramadanData = [
+        {
+          day: 1,
+          gregorian: "19 Feb",
+          hijri: "১ রমজান",
+          bengali: "১৯ ফেব্রুয়ারি",
+          weekDay: "বৃহস্পতিবার",
+          sehri: "05:13",
+          iftar: "17:56",
+          fajr: "05:18",
+          dhuhr: "12:13",
+          asr: "15:30",
+          maghrib: "17:56",
+          isha: "19:12",
+          isSpecial: false,
+        },
+        {
+          day: 2,
+          gregorian: "20 Feb",
+          hijri: "২ রমজান",
+          bengali: "২০ ফেব্রুয়ারি",
+          weekDay: "শুক্রবার",
+          sehri: "05:12",
+          iftar: "17:57",
+          fajr: "05:17",
+          dhuhr: "12:13",
+          asr: "15:31",
+          maghrib: "17:57",
+          isha: "19:13",
+          isSpecial: false,
+        },
+        {
+          day: 3,
+          gregorian: "21 Feb",
+          hijri: "৩ রমজান",
+          bengali: "২১ ফেব্রুয়ারি",
+          weekDay: "শনিবার",
+          sehri: "05:11",
+          iftar: "17:57",
+          fajr: "05:16",
+          dhuhr: "12:13",
+          asr: "15:31",
+          maghrib: "17:57",
+          isha: "19:13",
+          isSpecial: false,
+        },
+        {
+          day: 4,
+          gregorian: "22 Feb",
+          hijri: "৪ রমজান",
+          bengali: "২২ ফেব্রুয়ারি",
+          weekDay: "রবিবার",
+          sehri: "05:10",
+          iftar: "17:58",
+          fajr: "05:15",
+          dhuhr: "12:13",
+          asr: "15:32",
+          maghrib: "17:58",
+          isha: "19:14",
+          isSpecial: false,
+        },
+        {
+          day: 5,
+          gregorian: "23 Feb",
+          hijri: "৫ রমজান",
+          bengali: "২৩ ফেব্রুয়ারি",
+          weekDay: "সোমবার",
+          sehri: "05:09",
+          iftar: "17:59",
+          fajr: "05:14",
+          dhuhr: "12:12",
+          asr: "15:32",
+          maghrib: "17:59",
+          isha: "19:14",
+          isSpecial: false,
+        },
+        {
+          day: 6,
+          gregorian: "24 Feb",
+          hijri: "৬ রমজান",
+          bengali: "২৪ ফেব্রুয়ারি",
+          weekDay: "মঙ্গলবার",
+          sehri: "05:08",
+          iftar: "18:00",
+          fajr: "05:13",
+          dhuhr: "12:12",
+          asr: "15:33",
+          maghrib: "18:00",
+          isha: "19:15",
+          isSpecial: false,
+        },
+        {
+          day: 7,
+          gregorian: "25 Feb",
+          hijri: "৭ রমজান",
+          bengali: "২৫ ফেব্রুয়ারি",
+          weekDay: "বুধবার",
+          sehri: "05:07",
+          iftar: "18:00",
+          fajr: "05:12",
+          dhuhr: "12:12",
+          asr: "15:33",
+          maghrib: "18:00",
+          isha: "19:15",
+          isSpecial: false,
+        },
+        {
+          day: 8,
+          gregorian: "26 Feb",
+          hijri: "৮ রমজান",
+          bengali: "২৬ ফেব্রুয়ারি",
+          weekDay: "বৃহস্পতিবার",
+          sehri: "05:06",
+          iftar: "18:01",
+          fajr: "05:11",
+          dhuhr: "12:12",
+          asr: "15:34",
+          maghrib: "18:01",
+          isha: "19:16",
+          isSpecial: false,
+        },
+        {
+          day: 9,
+          gregorian: "27 Feb",
+          hijri: "৯ রমজান",
+          bengali: "২৭ ফেব্রুয়ারি",
+          weekDay: "শুক্রবার",
+          sehri: "05:05",
+          iftar: "18:02",
+          fajr: "05:10",
+          dhuhr: "12:11",
+          asr: "15:34",
+          maghrib: "18:02",
+          isha: "19:16",
+          isSpecial: false,
+        },
+        {
+          day: 10,
+          gregorian: "28 Feb",
+          hijri: "১০ রমজান",
+          bengali: "২৮ ফেব্রুয়ারি",
+          weekDay: "শনিবার",
+          sehri: "05:04",
+          iftar: "18:02",
+          fajr: "05:09",
+          dhuhr: "12:11",
+          asr: "15:35",
+          maghrib: "18:02",
+          isha: "19:17",
+          isSpecial: false,
+        },
+        {
+          day: 11,
+          gregorian: "01 Mar",
+          hijri: "১১ রমজান",
+          bengali: "১ মার্চ",
+          weekDay: "রবিবার",
+          sehri: "05:03",
+          iftar: "18:03",
+          fajr: "05:08",
+          dhuhr: "12:11",
+          asr: "15:35",
+          maghrib: "18:03",
+          isha: "19:17",
+          isSpecial: false,
+        },
+        {
+          day: 12,
+          gregorian: "02 Mar",
+          hijri: "১২ রমজান",
+          bengali: "২ মার্চ",
+          weekDay: "সোমবার",
+          sehri: "05:02",
+          iftar: "18:04",
+          fajr: "05:07",
+          dhuhr: "12:11",
+          asr: "15:36",
+          maghrib: "18:04",
+          isha: "19:18",
+          isSpecial: false,
+        },
+        {
+          day: 13,
+          gregorian: "03 Mar",
+          hijri: "১৩ রমজান",
+          bengali: "৩ মার্চ",
+          weekDay: "মঙ্গলবার",
+          sehri: "05:00",
+          iftar: "18:04",
+          fajr: "05:05",
+          dhuhr: "12:10",
+          asr: "15:36",
+          maghrib: "18:04",
+          isha: "19:18",
+          isSpecial: false,
+        },
+        {
+          day: 14,
+          gregorian: "04 Mar",
+          hijri: "১৪ রমজান",
+          bengali: "৪ মার্চ",
+          weekDay: "বুধবার",
+          sehri: "04:59",
+          iftar: "18:05",
+          fajr: "05:04",
+          dhuhr: "12:10",
+          asr: "15:37",
+          maghrib: "18:05",
+          isha: "19:19",
+          isSpecial: false,
+        },
+        {
+          day: 15,
+          gregorian: "05 Mar",
+          hijri: "১৫ রমজান",
+          bengali: "৫ মার্চ",
+          weekDay: "বৃহস্পতিবার",
+          sehri: "04:58",
+          iftar: "18:06",
+          fajr: "05:03",
+          dhuhr: "12:10",
+          asr: "15:37",
+          maghrib: "18:06",
+          isha: "19:19",
+          isSpecial: false,
+        },
+        {
+          day: 16,
+          gregorian: "06 Mar",
+          hijri: "১৬ রমজান",
+          bengali: "৬ মার্চ",
+          weekDay: "শুক্রবার",
+          sehri: "04:57",
+          iftar: "18:06",
+          fajr: "05:02",
+          dhuhr: "12:09",
+          asr: "15:37",
+          maghrib: "18:06",
+          isha: "19:20",
+          isSpecial: false,
+        },
+        {
+          day: 17,
+          gregorian: "07 Mar",
+          hijri: "১৭ রমজান",
+          bengali: "৭ মার্চ",
+          weekDay: "শনিবার",
+          sehri: "04:56",
+          iftar: "18:07",
+          fajr: "05:01",
+          dhuhr: "12:09",
+          asr: "15:38",
+          maghrib: "18:07",
+          isha: "19:20",
+          isSpecial: false,
+        },
+        {
+          day: 18,
+          gregorian: "08 Mar",
+          hijri: "১৮ রমজান",
+          bengali: "৮ মার্চ",
+          weekDay: "রবিবার",
+          sehri: "04:55",
+          iftar: "18:08",
+          fajr: "05:00",
+          dhuhr: "12:09",
+          asr: "15:38",
+          maghrib: "18:08",
+          isha: "19:21",
+          isSpecial: false,
+        },
+        {
+          day: 19,
+          gregorian: "09 Mar",
+          hijri: "১৯ রমজান",
+          bengali: "৯ মার্চ",
+          weekDay: "সোমবার",
+          sehri: "04:53",
+          iftar: "18:08",
+          fajr: "04:58",
+          dhuhr: "12:08",
+          asr: "15:38",
+          maghrib: "18:08",
+          isha: "19:21",
+          isSpecial: false,
+        },
+        {
+          day: 20,
+          gregorian: "10 Mar",
+          hijri: "২০ রমজান",
+          bengali: "১০ মার্চ",
+          weekDay: "মঙ্গলবার",
+          sehri: "04:52",
+          iftar: "18:09",
+          fajr: "04:57",
+          dhuhr: "12:08",
+          asr: "15:39",
+          maghrib: "18:09",
+          isha: "19:22",
+          isSpecial: false,
+        },
+        {
+          day: 21,
+          gregorian: "11 Mar",
+          hijri: "২১ রমজান",
+          bengali: "১১ মার্চ",
+          weekDay: "বুধবার",
+          sehri: "04:51",
+          iftar: "18:10",
+          fajr: "04:56",
+          dhuhr: "12:08",
+          asr: "15:39",
+          maghrib: "18:10",
+          isha: "19:22",
+          isSpecial: true,
+        },
+        {
+          day: 22,
+          gregorian: "12 Mar",
+          hijri: "২২ রমজান",
+          bengali: "১২ মার্চ",
+          weekDay: "বৃহস্পতিবার",
+          sehri: "04:50",
+          iftar: "18:10",
+          fajr: "04:55",
+          dhuhr: "12:07",
+          asr: "15:39",
+          maghrib: "18:10",
+          isha: "19:23",
+          isSpecial: false,
+        },
+        {
+          day: 23,
+          gregorian: "13 Mar",
+          hijri: "২৩ রমজান",
+          bengali: "১৩ মার্চ",
+          weekDay: "শুক্রবার",
+          sehri: "04:49",
+          iftar: "18:11",
+          fajr: "04:54",
+          dhuhr: "12:07",
+          asr: "15:40",
+          maghrib: "18:11",
+          isha: "19:23",
+          isSpecial: true,
+        },
+        {
+          day: 24,
+          gregorian: "14 Mar",
+          hijri: "২৪ রমজান",
+          bengali: "১৪ মার্চ",
+          weekDay: "শনিবার",
+          sehri: "04:47",
+          iftar: "18:12",
+          fajr: "04:52",
+          dhuhr: "12:07",
+          asr: "15:40",
+          maghrib: "18:12",
+          isha: "19:24",
+          isSpecial: false,
+        },
+        {
+          day: 25,
+          gregorian: "15 Mar",
+          hijri: "২৫ রমজান",
+          bengali: "১৫ মার্চ",
+          weekDay: "রবিবার",
+          sehri: "04:46",
+          iftar: "18:12",
+          fajr: "04:51",
+          dhuhr: "12:06",
+          asr: "15:40",
+          maghrib: "18:12",
+          isha: "19:24",
+          isSpecial: true,
+        },
+        {
+          day: 26,
+          gregorian: "16 Mar",
+          hijri: "২৬ রমজান",
+          bengali: "১৬ মার্চ",
+          weekDay: "সোমবার",
+          sehri: "04:45",
+          iftar: "18:13",
+          fajr: "04:50",
+          dhuhr: "12:06",
+          asr: "15:41",
+          maghrib: "18:13",
+          isha: "19:25",
+          isSpecial: false,
+        },
+        {
+          day: 27,
+          gregorian: "17 Mar",
+          hijri: "২৭ রমজান",
+          bengali: "১৭ মার্চ",
+          weekDay: "মঙ্গলবার",
+          sehri: "04:44",
+          iftar: "18:14",
+          fajr: "04:49",
+          dhuhr: "12:06",
+          asr: "15:41",
+          maghrib: "18:14",
+          isha: "19:25",
+          isSpecial: true,
+        },
+        {
+          day: 28,
+          gregorian: "18 Mar",
+          hijri: "২৮ রমজান",
+          bengali: "১৮ মার্চ",
+          weekDay: "বুধবার",
+          sehri: "04:42",
+          iftar: "18:14",
+          fajr: "04:47",
+          dhuhr: "12:05",
+          asr: "15:41",
+          maghrib: "18:14",
+          isha: "19:26",
+          isSpecial: false,
+        },
+        {
+          day: 29,
+          gregorian: "19 Mar",
+          hijri: "২৯ রমজান",
+          bengali: "১৯ মার্চ",
+          weekDay: "বৃহস্পতিবার",
+          sehri: "04:41",
+          iftar: "18:15",
+          fajr: "04:46",
+          dhuhr: "12:05",
+          asr: "15:42",
+          maghrib: "18:15",
+          isha: "19:26",
+          isSpecial: true,
+        },
+        {
+          day: 30,
+          gregorian: "20 Mar",
+          hijri: "৩০ রমজান",
+          bengali: "২০ মার্চ",
+          weekDay: "শুক্রবার",
+          sehri: "04:40",
+          iftar: "18:16",
+          fajr: "04:45",
+          dhuhr: "12:05",
+          asr: "15:42",
+          maghrib: "18:16",
+          isha: "19:27",
+          isSpecial: false,
+        },
+      ];
+
+      // =============================================
+      // HADITH DATA
+      // =============================================
+      const hadithData = [
+        {
+          narrator: "আবু হুরায়রা (রাঃ) বর্ণনা করেন",
+          arabic:
+            "إِذَا دَخَلَ شَهْرُ رَمَضَانَ فُتِّحَتْ أَبْوَابُ السَّمَاءِ وَغُلِّقَتْ أَبْوَابُ جَهَنَّمَ وَسُلْسِلَتِ الشَّيَاطِينُ",
+          bengali:
+            "যখন রমজান মাস আসে, আসমানের দরজাগুলো খুলে দেওয়া হয়, জাহান্নামের দরজাগুলো বন্ধ করে দেওয়া হয় এবং শয়তানদের শিকলে আবদ্ধ করা হয়।",
+          english:
+            "When the month of Ramadan begins, the gates of the heaven are opened, the gates of Hellfire are closed, and the devils are chained.",
+          source: "সহিহ বুখারি ১৮৯৯ | Muttafaqun Alayhi",
+        },
+        {
+          narrator: "আবু হুরায়রা (রাঃ) বর্ণনা করেন",
+          arabic:
+            "مَنْ صَامَ رَمَضَانَ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ",
+          bengali:
+            "যে ব্যক্তি ঈমানের সাথে এবং সওয়াবের আশায় রমজানের রোজা রাখে, তার পূর্ববর্তী সমস্ত গুনাহ মাফ করে দেওয়া হয়।",
+          english:
+            "Whoever fasts the month of Ramadan due to faith and seeking reward, his previous sins will be forgiven.",
+          source: "সহিহ বুখারি ১৯০১ | Muttafaqun Alayhi",
+        },
+        {
+          narrator: "আনাস ইবনে মালিক (রাঃ) বর্ণনা করেন",
+          arabic:
+            "إِنَّ هَذَا الشَّهْرَ قَدْ حَضَرَكُمْ وَفِيهِ لَيْلَةٌ خَيْرٌ مِنْ أَلْفِ شَهْرٍ",
+          bengali:
+            "এই মাস তোমাদের কাছে এসেছে, এতে এমন একটি রাত আছে যা হাজার মাসের চেয়ে উত্তম। যে এই রাত থেকে বঞ্চিত হয় সে সমস্ত কল্যাণ থেকে বঞ্চিত হয়।",
+          english:
+            "Verily, this month has presented itself to you. There is a night within it that is better than a thousand months. Whoever is deprived of it has been deprived of all good.",
+          source: "সুনানে ইবনে মাজাহ ১৬৪৪ | Hasan",
+        },
+        {
+          narrator: "আয়েশা (রাঃ) বর্ণনা করেন",
+          arabic:
+            "قُولِي اللَّهُمَّ إِنَّكَ عُفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
+          bengali:
+            "আমি বললাম: হে আল্লাহর রাসূল! যদি আমি জানতে পারি লাইলাতুল কদর কোন রাতে, তাহলে তখন কী বলব? তিনি বললেন: বলো — হে আল্লাহ, আপনি ক্ষমাশীল, আপনি ক্ষমা পছন্দ করেন, সুতরাং আমাকে ক্ষমা করুন।",
+          english:
+            "Say: O Allah, You are pardoning. You love to forgive, so forgive me. — Dua for Laylatul Qadr",
+          source: "সুনানে তিরমিযি ৩৫১৩ | Sahih",
+        },
+        {
+          narrator: "আনাস ইবনে মালিক (রাঃ) বর্ণনা করেন",
+          arabic: "تَسَحَّرُوا فَإِنَّ فِي السُّحُورِ بَرَكَةً",
+          bengali: "সেহরি খাও, কারণ সেহরিতে বরকত রয়েছে।",
+          english:
+            "Take the pre-fasting meal, for surely there are blessings in the pre-fasting meal (Suhoor).",
+          source: "সহিহ বুখারি ১৯২৩ | Muttafaqun Alayhi",
+        },
+        {
+          narrator: "সাহল ইবনে সাদ (রাঃ) বর্ণনা করেন",
+          arabic: "لَا يَزَالُ النَّاسُ بِخَيْرٍ مَا عَجَّلُوا الْفِطْرَ",
+          bengali:
+            "মানুষ ততদিন কল্যাণের মধ্যে থাকবে, যতদিন তারা দ্রুত ইফতার করবে।",
+          english:
+            "People will continue in goodness as long as they hasten to break their fast (Iftar).",
+          source: "সহিহ বুখারি ১৯৫৭ | Muttafaqun Alayhi",
+        },
+        {
+          narrator: "ইবনে উমর (রাঃ) বর্ণনা করেন",
+          arabic:
+            "الْتَمِسُوهَا فِي الْعَشْرِ الْأَوَاخِرِ يَعْنِي لَيْلَةَ الْقَدْرِ",
+          bengali:
+            "লাইলাতুল কদর রমজানের শেষ দশ রাতে তালাশ করো। যদি কেউ দুর্বল হয় বা অক্ষম হয়, তাহলে শেষ সাত রাতে যেন পরাজিত না হয়।",
+          english:
+            "Look for the Night of Decree in the last ten nights of Ramadan. If one of you is weak, then do not be overcome during the remaining seven nights.",
+          source: "সহিহ মুসলিম ১১৬৫ | Sahih",
+        },
+        {
+          narrator: "আবু হুরায়রা (রাঃ) বর্ণনা করেন",
+          arabic:
+            "مَنْ لَمْ يَدَعْ قَوْلَ الزُّورِ وَالْعَمَلَ بِهِ فَلَيْسَ لِلَّهِ حَاجَةٌ فِي أَنْ يَدَعَ طَعَامَهُ وَشَرَابَهُ",
+          bengali:
+            "যে ব্যক্তি মিথ্যা কথা বলা এবং সে অনুযায়ী আমল করা পরিত্যাগ না করে, তার পানাহার ত্যাগ করা নিয়ে আল্লাহর কোনো প্রয়োজন নেই।",
+          english:
+            "Whoever does not leave evil words and deeds while fasting, Allah does not need him to leave food and drink.",
+          source: "সহিহ বুখারি ১৯০৩ | Sahih",
+        },
+        {
+          narrator: "আবু আইউব (রাঃ) বর্ণনা করেন",
+          arabic:
+            "مَنْ صَامَ رَمَضَانَ ثُمَّ أَتْبَعَهُ سِتًّا مِنْ شَوَّالٍ كَانَ كَصِيَامِ الدَّهْرِ",
+          bengali:
+            "যে ব্যক্তি রমজান মাসের রোজা রাখে, তারপর শাওয়ালের ছয়টি রোজা রাখে, সে যেন সারা বছর রোজা রাখল।",
+          english:
+            "Whoever fasts the month of Ramadan and then follows it with six days of fasting in Shawwal, it will be as if he fasted for the entire year.",
+          source: "সহিহ মুসলিম ১১৬৪ | Sahih",
+        },
+      ];
+
+      // =============================================
+      // DUAS DATA
+      // =============================================
+      const duasData = [
+        {
+          icon: "🌙",
+          title: "সেহরির দোয়া",
+          titleAr: "دعاء السحور",
+          arabic: "وَبِصَوْمِ غَدٍ نَّوَيْتُ مِنْ شَهْرِ رَمَضَانَ",
+          bengali: "আমি আগামীকাল রমজান মাসের রোজার নিয়ত করলাম।",
+          english:
+            "I intend to keep the fast of tomorrow in the month of Ramadan.",
+        },
+        {
+          icon: "🌅",
+          title: "ইফতারের দোয়া",
+          titleAr: "دعاء الإفطار",
+          arabic:
+            "اللَّهُمَّ اِنِّي لَكَ صُمْتُ وَبِكَ آمَنْتُ وَعَلَيْكَ تَوَكَّلْتُ وَعَلَى رِزْقِكَ أَفْطَرْتُ",
+          bengali:
+            "হে আল্লাহ! আমি তোমার জন্যই রোজা রেখেছি, তোমার উপর ঈমান এনেছি, তোমার উপর ভরসা করেছি এবং তোমার দেওয়া রিজিক দিয়ে ইফতার করলাম।",
+          english:
+            "O Allah! I have fasted for You, believed in You, relied upon You, and broken my fast with Your provision.",
+        },
+        {
+          icon: "✨",
+          title: "লাইলাতুল কদরের দোয়া",
+          titleAr: "دعاء ليلة القدر",
+          arabic: "اللَّهُمَّ إِنَّكَ عُفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
+          bengali:
+            "হে আল্লাহ! আপনি ক্ষমাশীল, আপনি ক্ষমা করতে ভালোবাসেন। সুতরাং আমাকে ক্ষমা করুন।",
+          english:
+            "O Allah, You are pardoning and You love forgiveness, so forgive me.",
+        },
+        {
+          icon: "🤲",
+          title: "চাঁদ দেখার দোয়া",
+          titleAr: "دعاء رؤية الهلال",
+          arabic:
+            "اللَّهُمَّ أَهِلَّهُ عَلَيْنَا بِالْأَمْنِ وَالْإِيمَانِ وَالسَّلَامَةِ وَالْإِسْلَامِ رَبِّي وَرَبُّكَ اللَّهُ",
+          bengali:
+            "হে আল্লাহ! এই চাঁদকে আমাদের উপর নিরাপত্তা, ঈমান, শান্তি ও ইসলামের সাথে উদিত করুন। আমার ও তোমার প্রভু আল্লাহ।",
+          english:
+            "O Allah, bring it over us with blessings and faith, safety and Islam. My Lord and your Lord is Allah.",
+        },
+        {
+          icon: "💎",
+          title: "রোজা ভাঙার পরের দোয়া",
+          titleAr: "دعاء بعد الإفطار",
+          arabic:
+            "ذَهَبَ الظَّمَأُ وَابْتَلَّتِ الْعُرُوقُ وَثَبَتَ الأَجْرُ إِنْ شَاءَ اللَّهُ",
+          bengali:
+            "পিপাসা দূর হয়েছে, শিরাগুলো সিক্ত হয়েছে এবং ইনশাআল্লাহ সওয়াব নিশ্চিত হয়েছে।",
+          english:
+            "The thirst is gone, the veins are quenched, and the reward is confirmed, if Allah wills.",
+        },
+        {
+          icon: "🌟",
+          title: "তারাবির পরের দোয়া",
+          titleAr: "دعاء بعد التراويح",
+          arabic:
+            "سُبْحَانَ الْمَلِكِ الْقُدُّوسِ، سُبُّوحٌ قُدُّوسٌ رَبُّ الْمَلَائِكَةِ وَالرُّوحِ",
+          bengali:
+            "পবিত্র, মহান বাদশাহ; পবিত্র, মহান, ফেরেশতা ও জিবরীলের প্রভু।",
+          english:
+            "Glory be to the Holy Sovereign, He is Holy, the Lord of the Angels and the Spirit.",
+        },
+      ];
+
+      // =============================================
+      // UTILITY FUNCTIONS
+      // =============================================
+      function parseTime(timeStr) {
+        // "HH:MM" in 24-hour format -> minutes since midnight
+        const [h, m] = timeStr.split(":").map(Number);
+        return h * 60 + m;
+      }
+
+      function formatCountdown(seconds) {
+        if (seconds < 0) seconds = 0;
+        const h = Math.floor(seconds / 3600);
+        const m = Math.floor((seconds % 3600) / 60);
+        const s = seconds % 60;
+        return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+      }
+
+      function formatTime12(timeStr) {
+        const [h, m] = timeStr.split(":").map(Number);
+        const period = h >= 12 ? "PM" : "AM";
+        const h12 = h % 12 || 12;
+        return `${h12}:${String(m).padStart(2, "0")} ${period}`;
+      }
+
+      function toBengaliNum(n) {
+        return String(n).replace(/[0-9]/g, (d) => "০১২৩৪৫৬৭৮৯"[d]);
+      }
+
+      // Get today's Ramadan day (1-30) or null
+      function getTodayRamadanDay() {
+        // Ramadan 1447 starts Feb 19, 2026
+        const ramadanStart = new Date(2026, 1, 19); // Month is 0-indexed
+        const now = new Date();
+        const diffMs = now - ramadanStart;
+        const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)) + 1;
+        if (diffDays >= 1 && diffDays <= 30) return diffDays;
+        return null;
+      }
+
+      // =============================================
+      // TIMER SYSTEM
+      // =============================================
+      let timerInterval = null;
+      let isPageVisible = true;
+
+      document.addEventListener("visibilitychange", () => {
+        isPageVisible = !document.hidden;
+        if (isPageVisible && !timerInterval) startTimers();
+        else if (!isPageVisible && timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+        }
+      });
+
+      function startTimers() {
+        updateTimers();
+        timerInterval = setInterval(updateTimers, 1000);
+      }
+
+      function updateTimers() {
+        const todayDay = getTodayRamadanDay();
+        const now = new Date();
+        const nowMins = now.getHours() * 60 + now.getMinutes();
+        const nowSecs = nowMins * 60 + now.getSeconds();
+
+        if (!todayDay) {
+          // Not Ramadan yet or over
+          const isBeforeRamadan = new Date() < new Date(2026, 1, 19);
+          document.getElementById("sehriCountdown").textContent =
+            isBeforeRamadan ? "শীঘ্রই" : "শেষ";
+          document.getElementById("iftarCountdown").textContent =
+            isBeforeRamadan ? "শীঘ্রই" : "শেষ";
+          document.getElementById("todayRamadanDay").textContent =
+            isBeforeRamadan ? "শীঘ্রই" : "সমাপ্ত";
+          document.getElementById("todayGregorian").textContent = "—";
+          document.getElementById("todayHijri").textContent = "—";
+          document.getElementById("todayWeekday").textContent = "—";
+          return;
+        }
+
+        const data = ramadanData[todayDay - 1];
+        const sehriMins = parseTime(data.sehri); // Sehri END time
+        const iftarMins = parseTime(data.iftar);
+
+        // Update today's strip
+        document.getElementById("todayRamadanDay").textContent =
+          toBengaliNum(todayDay);
+        document.getElementById("todayGregorian").textContent = data.bengali;
+        document.getElementById("todayHijri").textContent = data.hijri;
+        document.getElementById("todayWeekday").textContent = data.weekDay;
+
+        // Update time displays
+        document.getElementById("sehriTimeDisplay").textContent = formatTime12(
+          data.sehri,
+        );
+        document.getElementById("iftarTimeDisplay").textContent = formatTime12(
+          data.iftar,
+        );
+
+        // Sehri countdown: time until sehri ends (if before sehri end)
+        // If after sehri but before iftar: show "রোজা রাখুন" state
+        // If after iftar: show next day's sehri countdown
+
+        const sehriSecs = sehriMins * 60;
+        const iftarSecs = iftarMins * 60;
+
+        let sehriRemaining, iftarRemaining;
+
+        if (nowSecs < sehriSecs) {
+          // Before sehri end - show countdown to sehri end
+          sehriRemaining = sehriSecs - nowSecs;
+          document.getElementById("sehriCountdown").textContent =
+            formatCountdown(sehriRemaining);
+          document.querySelector(
+            "#sehriCard .timer-label-remaining",
+          ).textContent = "সেহরির সময় শেষ হতে বাকি";
+
+          // Sehri progress (from midnight to sehri)
+          const pct = Math.min(100, (nowSecs / sehriSecs) * 100);
+          document.getElementById("sehriProgress").style.width = pct + "%";
+        } else if (nowSecs >= sehriSecs && nowSecs < iftarSecs) {
+          // Fasting period - show how long until today's iftar
+          document.getElementById("sehriCountdown").textContent = "রোজা চলছে";
+          document.querySelector(
+            "#sehriCard .timer-label-remaining",
+          ).textContent = "আলহামদুলিল্লাহ";
+          document.getElementById("sehriProgress").style.width = "100%";
+        } else {
+          // After iftar - show tomorrow's sehri
+          const nextDay = todayDay < 30 ? ramadanData[todayDay] : null;
+          if (nextDay) {
+            const tomorrowSehriSecs = parseTime(nextDay.sehri) * 60;
+            const secsUntilMidnight = 86400 - nowSecs;
+            sehriRemaining = secsUntilMidnight + tomorrowSehriSecs;
+            document.getElementById("sehriCountdown").textContent =
+              formatCountdown(sehriRemaining);
+            document.getElementById("sehriTimeDisplay").textContent =
+              formatTime12(nextDay.sehri) + " (আগামীকাল)";
+            document.querySelector(
+              "#sehriCard .timer-label-remaining",
+            ).textContent = "আগামীকালের সেহরির সময় বাকি";
+          } else {
+            document.getElementById("sehriCountdown").textContent = "রমজান শেষ";
+          }
+          document.getElementById("sehriProgress").style.width = "100%";
+        }
+
+        // Iftar countdown
+        if (nowSecs < iftarSecs) {
+          iftarRemaining = iftarSecs - nowSecs;
+          document.getElementById("iftarCountdown").textContent =
+            formatCountdown(iftarRemaining);
+          document.querySelector(
+            "#iftarCard .timer-label-remaining",
+          ).textContent = "ইফতার হতে বাকি";
+
+          const fastingDuration = iftarSecs - sehriSecs;
+          const elapsed = Math.max(0, nowSecs - sehriSecs);
+          const pct =
+            fastingDuration > 0
+              ? Math.min(100, (elapsed / fastingDuration) * 100)
+              : 0;
+          document.getElementById("iftarProgress").style.width = pct + "%";
+
+          // Warning if less than 30 mins
+          const iftarCard = document.getElementById("iftarCard");
+          const countdown = document.getElementById("iftarCountdown");
+          if (iftarRemaining < 1800) {
+            iftarCard.classList.add("warning");
+            countdown.classList.add("warning");
+          } else {
+            iftarCard.classList.remove("warning");
+            countdown.classList.remove("warning");
+          }
+        } else {
+          document.getElementById("iftarCountdown").textContent =
+            "ইফতার হয়ে গেছে ✓";
+          document.getElementById("iftarProgress").style.width = "100%";
+          document.querySelector(
+            "#iftarCard .timer-label-remaining",
+          ).textContent = "আলহামদুলিল্লাহ";
+        }
+
+        // Update next prayer indicator
+        updatePrayerIndicator(data, nowMins);
+      }
+
+      function updatePrayerIndicator(data, nowMins) {
+        const prayers = [
+          { name: "ফজর", time: data.fajr, icon: "🌙" },
+          { name: "সেহরি শেষ", time: data.sehri, icon: "⏰" },
+          { name: "যোহর", time: data.dhuhr, icon: "☀️" },
+          { name: "আসর", time: data.asr, icon: "🌤️" },
+          { name: "ইফতার/মাগরিব", time: data.maghrib, icon: "🌅" },
+          { name: "এশা", time: data.isha, icon: "🌙" },
+        ];
+
+        let nextPrayer = null;
+        for (const p of prayers) {
+          if (parseTime(p.time) > nowMins) {
+            nextPrayer = p;
+            break;
+          }
+        }
+        if (!nextPrayer)
+          nextPrayer = { name: "ফজর (আগামীকাল)", time: data.fajr, icon: "🌙" };
+
+        document.getElementById("piName").textContent =
+          nextPrayer.icon + " " + nextPrayer.name;
+        document.getElementById("piTime").textContent = formatTime12(
+          nextPrayer.time,
+        );
+      }
+
+      // =============================================
+      // CALENDAR RENDERING
+      // =============================================
+      function renderCalendar(filter = "all") {
+        const grid = document.getElementById("calendarGrid");
+        const todayDay = getTodayRamadanDay();
+        grid.innerHTML = "";
+
+        let filtered = ramadanData;
+        if (filter === 1) filtered = ramadanData.slice(0, 10);
+        else if (filter === 2) filtered = ramadanData.slice(10, 20);
+        else if (filter === 3) filtered = ramadanData.slice(20, 30);
+
+        filtered.forEach((d) => {
+          const seg = d.day <= 10 ? 1 : d.day <= 20 ? 2 : 3;
+          const isToday = todayDay === d.day;
+          const isQadr = d.isSpecial;
+
+          const card = document.createElement("article");
+          card.className = `cal-card seg-${seg}${isToday ? " today" : ""}${isQadr ? " laylatul-qadr" : ""}`;
+          card.setAttribute("role", "listitem");
+          card.setAttribute(
+            "aria-label",
+            `${d.hijri}, সেহরি ${formatTime12(d.sehri)}, ইফতার ${formatTime12(d.iftar)}`,
+          );
+          card.setAttribute("tabindex", "0");
+          card.onclick = () => expandCalCard(d.day);
+          card.onkeypress = (e) => {
+            if (e.key === "Enter") expandCalCard(d.day);
+          };
+
+          card.innerHTML = `
+      <div class="today-pulse" aria-hidden="true"></div>
+      <div class="cal-day-header">
+        <div>
+          <div class="cal-day-num">${toBengaliNum(d.day)}</div>
+          ${isQadr ? '<div class="qadr-badge">✨ বিশেষ রাত</div>' : ""}
+        </div>
+        <div class="cal-day-meta">
+          <div class="cal-hijri">${d.hijri.split(" ")[0]}</div>
+          <div class="cal-date">${d.gregorian}</div>
+          <div class="cal-weekday">${d.weekDay}</div>
+        </div>
+      </div>
+      <div class="cal-times">
+        <div class="cal-time-item">
+          <span class="cal-time-icon">🌙</span>
+          <span class="cal-time-label">সেহরি</span>
+          <span class="cal-time-val">${formatTime12(d.sehri)}</span>
+        </div>
+        <div class="cal-time-item">
+          <span class="cal-time-icon">🌅</span>
+          <span class="cal-time-label">ইফতার</span>
+          <span class="cal-time-val">${formatTime12(d.iftar)}</span>
+        </div>
+      </div>
+    `;
+          grid.appendChild(card);
+        });
+      }
+
+      let expandedDay = null;
+      function expandCalCard(day) {
+        const panel = document.getElementById("calExpanded");
+        if (expandedDay === day) {
+          panel.classList.remove("show");
+          expandedDay = null;
+          return;
+        }
+        expandedDay = day;
+        const d = ramadanData[day - 1];
+        panel.classList.add("show");
+        panel.innerHTML = `
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:20px">
+      <div>
+        <h3 style="font-family:var(--font-display); color:var(--primary); font-size:22px">${d.hijri} — ${d.bengali}</h3>
+        <div style="color:var(--text-muted); font-size:13px">${d.weekDay}</div>
+      </div>
+      <button onclick="expandedDay=null; document.getElementById('calExpanded').classList.remove('show')"
+        style="background:var(--bg-card2); border:1px solid var(--border); padding:6px 14px; border-radius:20px; cursor:pointer; color:var(--text-muted); font-family:var(--font-bengali);">
+        বন্ধ করুন ✕
+      </button>
+    </div>
+    <div class="expanded-grid">
+      <div class="expanded-prayer">
+        <div class="ep-icon">🌙</div>
+        <div class="ep-name">সেহরি (শেষ সময়)</div>
+        <div class="ep-time">${formatTime12(d.sehri)}</div>
+      </div>
+      <div class="expanded-prayer">
+        <div class="ep-icon">🌄</div>
+        <div class="ep-name">ফজর</div>
+        <div class="ep-time">${formatTime12(d.fajr)}</div>
+      </div>
+      <div class="expanded-prayer">
+        <div class="ep-icon">☀️</div>
+        <div class="ep-name">যোহর</div>
+        <div class="ep-time">${formatTime12(d.dhuhr)}</div>
+      </div>
+      <div class="expanded-prayer">
+        <div class="ep-icon">🌤️</div>
+        <div class="ep-name">আসর</div>
+        <div class="ep-time">${formatTime12(d.asr)}</div>
+      </div>
+      <div class="expanded-prayer">
+        <div class="ep-icon">🌅</div>
+        <div class="ep-name">মাগরিব / ইফতার</div>
+        <div class="ep-time ep-special">${formatTime12(d.iftar)}</div>
+      </div>
+      <div class="expanded-prayer">
+        <div class="ep-icon">🌙</div>
+        <div class="ep-name">এশা / তারাবি</div>
+        <div class="ep-time">${formatTime12(d.isha)}</div>
+      </div>
+    </div>
+    ${
+      d.isSpecial
+        ? `<div style="margin-top:16px; background:rgba(183,110,121,0.1); border:1px solid var(--accent); border-radius:10px; padding:12px; color:var(--accent); font-size:14px; text-align:center;">
+      ✨ এই রাতটি লাইলাতুল কদর হতে পারে — বেশি বেশি ইবাদত করুন
+    </div>`
+        : ""
+    }
+  `;
+        panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+
+      function filterCalendar(filter) {
+        document.querySelectorAll(".segment-btn").forEach((btn) => {
+          btn.classList.remove("active");
+          btn.setAttribute("aria-pressed", "false");
+        });
+        const idx = filter === "all" ? 0 : filter;
+        const btns = document.querySelectorAll(".segment-btn");
+        if (filter === "all") {
+          btns[0].classList.add("active");
+          btns[0].setAttribute("aria-pressed", "true");
+        } else {
+          btns[filter].classList.add("active");
+          btns[filter].setAttribute("aria-pressed", "true");
+        }
+        expandedDay = null;
+        document.getElementById("calExpanded").classList.remove("show");
+        renderCalendar(filter);
+      }
+
+      // =============================================
+      // HADITH CAROUSEL
+      // =============================================
+      let currentHadith = 0;
+      let hadithAutoPlay = null;
+
+      function renderHadith() {
+        const track = document.getElementById("hadithTrack");
+        const dots = document.getElementById("hadithDots");
+        track.innerHTML = "";
+        dots.innerHTML = "";
+
+        hadithData.forEach((h, i) => {
+          const slide = document.createElement("div");
+          slide.className = "hadith-slide";
+          slide.innerHTML = `
+      <div class="hadith-card">
+        <div class="hadith-arabic-text">${h.arabic}</div>
+        <div class="hadith-narrator">${h.narrator}</div>
+        <div class="hadith-translation">${h.bengali}</div>
+        <div style="color: rgba(255,255,255,0.5); font-size: 13px; margin-bottom: 14px; font-style: italic;">${h.english}</div>
+        <div class="hadith-source">📚 ${h.source}</div>
+      </div>
+    `;
+          track.appendChild(slide);
+
+          const dot = document.createElement("button");
+          dot.className = "hadith-dot" + (i === 0 ? " active" : "");
+          dot.setAttribute("role", "tab");
+          dot.setAttribute("aria-label", `হাদিস ${i + 1}`);
+          dot.onclick = () => goToHadith(i);
+          dots.appendChild(dot);
+        });
+
+        startHadithAutoplay();
+      }
+
+      function goToHadith(idx) {
+        currentHadith = idx;
+        document.getElementById("hadithTrack").style.transform =
+          `translateX(-${idx * 100}%)`;
+        document.querySelectorAll(".hadith-dot").forEach((d, i) => {
+          d.classList.toggle("active", i === idx);
+        });
+      }
+
+      function nextHadith() {
+        goToHadith((currentHadith + 1) % hadithData.length);
+        resetAutoplay();
+      }
+      function prevHadith() {
+        goToHadith((currentHadith - 1 + hadithData.length) % hadithData.length);
+        resetAutoplay();
+      }
+
+      function startHadithAutoplay() {
+        hadithAutoPlay = setInterval(
+          () => goToHadith((currentHadith + 1) % hadithData.length),
+          6000,
+        );
+        const carousel = document.getElementById("hadithCarousel");
+        carousel.addEventListener("mouseenter", () =>
+          clearInterval(hadithAutoPlay),
+        );
+        carousel.addEventListener("mouseleave", () => {
+          hadithAutoPlay = setInterval(
+            () => goToHadith((currentHadith + 1) % hadithData.length),
+            6000,
+          );
+        });
+      }
+
+      function resetAutoplay() {
+        clearInterval(hadithAutoPlay);
+        hadithAutoPlay = setInterval(
+          () => goToHadith((currentHadith + 1) % hadithData.length),
+          6000,
+        );
+      }
+
+      // Touch support for hadith carousel
+      let touchStartX = 0;
+      document
+        .getElementById("hadithCarousel")
+        ?.addEventListener("touchstart", (e) => {
+          touchStartX = e.touches[0].clientX;
+        });
+      document
+        .getElementById("hadithCarousel")
+        ?.addEventListener("touchend", (e) => {
+          const diff = touchStartX - e.changedTouches[0].clientX;
+          if (Math.abs(diff) > 50) diff > 0 ? nextHadith() : prevHadith();
+        });
+
+      // =============================================
+      // DUAS RENDERING
+      // =============================================
+      function renderDuas() {
+        const grid = document.getElementById("duasGrid");
+        duasData.forEach((d) => {
+          const card = document.createElement("div");
+          card.className = "dua-card";
+          card.innerHTML = `
+      <div class="dua-title">${d.icon} ${d.title} <span style="font-size:14px; color:var(--text-muted); font-family:var(--font-arabic)">${d.titleAr}</span></div>
+      <div class="dua-subtitle"></div>
+      <div class="dua-arabic">${d.arabic}</div>
+      <div class="dua-bengali">${d.bengali}</div>
+      <div class="dua-english">${d.english}</div>
+    `;
+          grid.appendChild(card);
+        });
+      }
+
+      // =============================================
+      // TASBIH COUNTER
+      // =============================================
+      const tasbihPhrases = [
+        {
+          arabic: "سُبْحَانَ اللَّهِ",
+          bengali: "সুবহানআল্লাহ — আল্লাহ পবিত্র",
+          english: "Glory be to Allah",
+          target: 33,
+        },
+        {
+          arabic: "الْحَمْدُ لِلَّهِ",
+          bengali: "আলহামদুলিল্লাহ — সব প্রশংসা আল্লাহর",
+          english: "All praise is due to Allah",
+          target: 33,
+        },
+        {
+          arabic: "اللَّهُ أَكْبَرُ",
+          bengali: "আল্লাহু আকবার — আল্লাহ মহান",
+          english: "Allah is the Greatest",
+          target: 34,
+        },
+      ];
+
+      let tasbihCount = 0;
+      let tasbihRound = 0; // 0=Subhanallah, 1=Alhamdulillah, 2=Allahuakbar
+      let tasbihTotal = 0;
+      let tasbihHistory = [];
+
+      function clickTasbih() {
+        tasbihHistory.push({
+          count: tasbihCount,
+          round: tasbihRound,
+          total: tasbihTotal,
+        });
+        tasbihCount++;
+        tasbihTotal++;
+
+        const phrase = tasbihPhrases[tasbihRound];
+        if (tasbihCount >= phrase.target) {
+          tasbihCount = 0;
+          tasbihRound = (tasbihRound + 1) % 3;
+          if (tasbihRound === 0) {
+            // One full set done
+          }
+          updateTasbihDisplay();
+        }
+
+        document.getElementById("tasbihCount").textContent =
+          toBengaliNum(tasbihCount);
+        document.getElementById("tasbihTotal").textContent =
+          toBengaliNum(tasbihTotal);
+        document.getElementById("tasbihRound").textContent = toBengaliNum(
+          tasbihRound === 0 ? 1 : tasbihRound + 1,
+        );
+      }
+
+      function updateTasbihDisplay() {
+        const phrase = tasbihPhrases[tasbihRound];
+        document.getElementById("tasbihPhrase").textContent = phrase.arabic;
+        document.getElementById("tasbihCurrentPhrase").textContent =
+          phrase.arabic;
+        document.getElementById("tasbihTarget").textContent = toBengaliNum(
+          phrase.target,
+        );
+        document.getElementById("tasbihTr").textContent =
+          phrase.bengali + " (" + toBengaliNum(phrase.target) + "x)";
+      }
+
+      function undoTasbih() {
+        if (tasbihHistory.length === 0) return;
+        const prev = tasbihHistory.pop();
+        tasbihCount = prev.count;
+        tasbihRound = prev.round;
+        tasbihTotal = prev.total;
+        document.getElementById("tasbihCount").textContent =
+          toBengaliNum(tasbihCount);
+        document.getElementById("tasbihTotal").textContent =
+          toBengaliNum(tasbihTotal);
+        document.getElementById("tasbihRound").textContent = toBengaliNum(
+          tasbihRound + 1,
+        );
+        updateTasbihDisplay();
+      }
+
+      function resetTasbih() {
+        if (!confirm("তাসবিহ রিসেট করবেন?")) return;
+        tasbihCount = 0;
+        tasbihRound = 0;
+        tasbihTotal = 0;
+        tasbihHistory = [];
+        document.getElementById("tasbihCount").textContent = "০";
+        document.getElementById("tasbihTotal").textContent = "০";
+        document.getElementById("tasbihRound").textContent = "১";
+        updateTasbihDisplay();
+      }
+
+      // =============================================
+      // THEME TOGGLE
+      // =============================================
+      function toggleTheme() {
+        const html = document.documentElement;
+        const isDark = html.getAttribute("data-theme") === "dark";
+        html.setAttribute("data-theme", isDark ? "light" : "dark");
+        document.querySelector(
+          '.btn-icon[onclick="toggleTheme()"]',
+        ).textContent = isDark ? "🌙" : "☀️";
+        localStorage.setItem("theme", isDark ? "light" : "dark");
+      }
+
+      // Load saved theme
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+        if (savedTheme === "dark")
+          document.querySelector(
+            '.btn-icon[onclick="toggleTheme()"]',
+          ).textContent = "☀️";
+      }
+
+      // =============================================
+      // WHATSAPP SHARE
+      // =============================================
+      function shareWhatsApp() {
+        const todayDay = getTodayRamadanDay();
+        let msg;
+        if (todayDay) {
+          const d = ramadanData[todayDay - 1];
+          msg =
+            `🌙 রমজান ${toBengaliNum(todayDay)} (${d.bengali})\n\n` +
+            `⏰ সেহরির শেষ সময়: ${formatTime12(d.sehri)}\n` +
+            `🌅 আজকের ইফতার: ${formatTime12(d.iftar)}\n\n` +
+            `📍 ঢাকা, বাংলাদেশ\n` +
+            `🤲 রমজান ক্যালেন্ডার ১৪৪৭`;
+        } else {
+          msg = `🌙 রমজান ক্যালেন্ডার ১৪৪৭ — ঢাকা, বাংলাদেশ\nআলহামদুলিল্লাহ 🤲`;
+        }
+        const url = `https://wa.me/?text=${encodeURIComponent(msg)}`;
+        window.open(url, "_blank");
+      }
+
+      // =============================================
+      // PRINT & MODAL
+      // =============================================
+      function openPrintView() {
+        document.getElementById("printModal").classList.add("show");
+      }
+      function closePrintModal(e) {
+        if (
+          !e ||
+          e.target === document.getElementById("printModal") ||
+          e.currentTarget === e.target
+        ) {
+          document.getElementById("printModal").classList.remove("show");
+        }
+      }
+
+      function scrollToCalendar() {
+        document
+          .getElementById("calendar")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+
+      // =============================================
+      // INIT
+      // =============================================
+      document.addEventListener("DOMContentLoaded", () => {
+        renderCalendar();
+        renderHadith();
+        renderDuas();
+        startTimers();
+
+        // Keyboard shortcuts
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            document.getElementById("printModal").classList.remove("show");
+            document.getElementById("calExpanded").classList.remove("show");
+            expandedDay = null;
+          }
+          if (e.key === "ArrowLeft") prevHadith();
+          if (e.key === "ArrowRight") nextHadith();
+          if (
+            e.key === " " &&
+            document.activeElement.classList.contains("tasbih-ring")
+          ) {
+            e.preventDefault();
+            clickTasbih();
+          }
+        });
+
+        // Highlight today's card
+        const todayDay = getTodayRamadanDay();
+        if (todayDay) {
+          setTimeout(() => {
+            const todayCard = document.querySelector(".cal-card.today");
+            if (todayCard)
+              todayCard.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+              });
+          }, 500);
+        }
+      });
+    </script>
+
+    <style>
+      /* Print styles */
+      @media print {
+        header,
+        .hero,
+        .hadith-section,
+        #duas,
+        #tasbih,
+        footer,
+        .prayer-indicator,
+        #printModal {
+          display: none !important;
+        }
+        body {
+          background: white;
+          color: black;
+        }
+        .calendar-grid {
+          grid-template-columns: repeat(5, 1fr);
+        }
+        .cal-card {
+          break-inside: avoid;
+        }
+        .section {
+          padding: 20px 0;
+        }
+      }
+    </style>
+  </body>
+</html>
